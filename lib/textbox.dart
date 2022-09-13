@@ -11,24 +11,31 @@ class TextBox extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
+            SizedBox(width: 170, height: 20),
             Text(
-              'We apologise for the inconvenience caused!',
+              ' We apologise for the inconvenience caused!',
+              textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 15,
-                color: Color.fromARGB(255, 46, 43, 46),
+                fontSize: 17,
+                color: Colors.white,
               ),
             ),
+            SizedBox(width: 170, height: 20),
             Text(
-              'Kindly give us 2-3 to get back at your  issue',
+              ' Kindly give us 2-3 to get back at your issue',
+              textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 15,
-                color: Color.fromARGB(255, 46, 43, 46),
+                fontSize: 17,
+                color: Colors.white,
               ),
             ),
-            Text('Thanks for your cooperation',
-            style: TextStyle(
-                fontSize: 15,
-                color: Color.fromARGB(255, 46, 43, 46),
+            SizedBox(width: 170, height: 20),
+            Text(
+              '             Thanks for your cooperation!',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 17,
+                color: Colors.white,
               ),
             ),
           ]);

@@ -15,57 +15,92 @@ class TestApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(title: const Text('ComplaintPage')),
+          backgroundColor: Colors.grey,
           body: Center(
               child: Column(children: <Widget>[
+            const SizedBox(
+              width: 200.0,
+              height: 30.0,
+            ),
             Container(
-              decoration: BoxDecoration(
-                  color: Colors.grey, borderRadius: BorderRadius.circular(17)),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(17)),
               margin: const EdgeInsets.all(25),
               child: FlatButton(
                 child: const Text(
-                  ' Reach Us',
-                  style: TextStyle(fontSize: 30.0),
+                  ' REACH US',
+                  style: TextStyle(fontSize: 30.0, color: Colors.white),
                 ),
                 onPressed: () {},
               ),
             ),
             Container(
                 decoration: BoxDecoration(
-                    color: Colors.grey,
+                    color: Color.fromRGBO(68, 64, 77, 1),
                     borderRadius: BorderRadius.circular(17)),
-                width: 300,
+                width: 343,
                 child: Column(children: [
+                  SizedBox(
+                    width: 200,
+                    height: 40,
+                  ),
                   const Text("Facing Any Issues?",
-                      style: TextStyle(fontSize: 15)),
+                      textAlign: TextAlign.left,
+                      style: TextStyle(fontSize: 20, color: Colors.white)),
+                  const SizedBox(
+                    width: 200.0,
+                    height: 30.0,
+                  ),
                   const DropDown(),
                   const SizedBox(
                     width: 200.0,
-                    height: 50.0,
+                    height: 30.0,
                   ),
-                  const Text("Description"),
+                  Container(
+                    width: 285,
+                    margin: const EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      border: Border.all(width: 2, color: Colors.grey),
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                    ),
+                    child: Text("  Description",
+                        style: TextStyle(fontSize: 20, color: Colors.black)),
+                  ),
                   const SizedBox(
                     width: 200.0,
-                    height: 50.0,
+                    height: 20.0,
                   ),
-                  const TextField(
-                    decoration: const InputDecoration(
-                      border: UnderlineInputBorder(),
-                      labelText: 'Please Enter few lines',
+                  Container(
+                    color: Colors.grey,
+                    width: 282,
+                    child: TextField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: const InputDecoration(
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black)),
+                          labelText: 'Please Enter few lines',
+                          hintText: 'Describe your issue '),
+                      cursorColor: Colors.black,
                     ),
                   ),
                   const SizedBox(
                     width: 200.0,
-                    height: 50.0,
+                    height: 30.0,
                   ),
                   Container(
                     margin: const EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      border: Border.all(width: 2, color: Colors.grey),
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                    ),
                     child: FlatButton(
-                      color: Color.fromARGB(255, 5, 5, 5),
-                      textColor: Colors.white,
+                      //color: Colors.grey,
+                      textColor: Colors.black,
                       onPressed: () {},
                       child: const Text(
-                        'Submit',
+                        'SUBMIT',
                         style: TextStyle(fontSize: 20.0),
                       ),
                     ),
@@ -73,14 +108,14 @@ class TestApp extends StatelessWidget {
                 ])),
             const SizedBox(
               width: 200.0,
-              height: 50.0,
+              height: 40.0,
             ),
             Container(
                 decoration: BoxDecoration(
-                    color: Colors.grey,
+                    color: Color.fromRGBO(68, 64, 77, 1),
                     borderRadius: BorderRadius.circular(17)),
-                width: 350,
-                height: 100,
+                width: 343,
+                height: 150,
                 child: TextBox())
           ]))),
     );

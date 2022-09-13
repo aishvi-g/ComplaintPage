@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const List<String> list = <String>['App-based', 'Food-based'];
+const List<String> list = <String>['Type of Issue ','App-based', 'Food-based'];
 
 // ignore: empty_constructor_bodies
 class DropDown extends StatelessWidget {
@@ -32,8 +32,9 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       elevation: 16,
       style: const TextStyle(color: Color.fromARGB(255, 7, 7, 7)),
       underline: Container(
+        width: 15,
         height: 1,
-        color: Colors.deepPurpleAccent,
+      
       ),
       onChanged: (String? value) {
         // This is called when the user selects an item.
@@ -50,3 +51,4 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
     );
   }
 }
+
